@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Barangay One-Stop Service Portal</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- SPLASH SCREEN -->
+    <section class="splash-screen">
+
+        <div class="splash-overlay"></div>
+
+        <div class="splash-content">
+
+            <div class="barangay-logo">
+                <img src="assets/LogoParang.png" alt="Barangay Parang Logo">
+            </div>
+
+            <h2>BARANGAY PARANG</h2>
+
+            <h1>
+                BARANGAY ONE-STOP<br>
+                SERVICE PORTAL
+            </h1>
+
+            <p>
+                Modernizing Barangay Services for Everyone
+            </p>
+
+            <div class="loading">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <!-- Logo / Barangay Name -->
+            <a href="#home" class="nav-logo">
+                BARANGAY PARANG
+            </a>
+
+            <!-- Mobile Hamburger -->
+            <button type="button" class="hamburger" id="hamburger" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="nav-links">
+                ☰
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="nav-links" id="nav-links">
+
+                <a href="#home-section" class="nav-link active">
+                    Home
+                </a>
+
+                <a href="#services" class="nav-link">
+                    Services
+                </a>
+
+                <a href="#about" class="nav-link">
+                    About
+                </a>
+
+                <a href="#contact" class="nav-link">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- MAIN -->
+    <main class="homepage">
+
+        <!-- Welcome Sec (HOME) -->
+        <section class="welcome-section page-section active-section" id="home-section">
+
+            <div class="welcome-content">
+
+                <p class="welcome-label">
+                    WELCOME TO
+                </p>
+
+                <h1>
+                    Barangay Parang
+                </h1>
+
+                <h2>
+                    Our Barangay One-Stop Service Portal
+                </h2>
+
+                <p class="welcome-description">
+                    Access barangay services, information, and requests
+                    conveniently in one place.
+                </p>
+
+
+                <!-- Home act btns -->
+                <div class="welcome-buttons">
+
+                    <button type="button" class="primary-button" id="welcome-request-button">
+                        Request a Service
+                    </button>
+
+                    <button type="button" class="secondary-button" id="appointment-button">
+                        Book an Appointment
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="services-section page-section" id="services">
+
+            <!-- Services Heading -->
+            <div class="section-heading">
+
+                <p class="section-label">
+                    OUR SERVICES
+                </p>
+
+                <h2>
+                    Barangay Services
+                </h2>
+
+                <p>
+                    Access commonly requested barangay documents and
+                    services conveniently through our online portal.
+                </p>
+
+            </div>
+
+
+            <!-- Services Cards Wrapper -->
+            <div class="services-wrapper">
+
+                <div class="services-container">
+
+
+                    <!-- Service Card 1 -->
+                    <article class="service-card" data-service="Barangay Clearance">
+
+                        <div class="service-icon">
+                            📄
+                        </div>
+
+                        <h3>
+                            Barangay Clearance
+                        </h3>
+
+                        <p>
+                            Request a Barangay Clearance for employment,
+                            business, and other official requirements.
+                        </p>
+
+                        <button type="button" class="service-button">
+                            Request Service
+                        </button>
+
+                    </article>
+
+
+                    <!-- Service Card 2 -->
+                    <article class="service-card" data-service="Certificate of Residency">
+
+                        <div class="service-icon">
+                            🏠
+                        </div>
+
+                        <h3>
+                            Certificate of Residency
+                        </h3>
+
+                        <p>
+                            Request a Barangay Certificate of Residency
+                            for various official purposes.
+                        </p>
+
+                        <button type="button" class="service-button">
+                            Request Service
+                        </button>
+
+                    </article>
+
+
+                    <!-- Service card 3 -->
+
+                    <article class="service-card" data-service="Barangay Indigency">
+
+                        <div class="service-icon">
+                            📋
+                        </div>
+
+                        <h3>
+                            Barangay Indigency
+                        </h3>
+
+                        <p>
+                            Request a Barangay Certificate of Indigency
+                            for various official purposes.
+                        </p>
+
+                        <button type="button" class="service-button">
+                            Request Service
+                        </button>
+
+                    </article>
+
+
+                    <!-- Service card 4 -->
+
+                    <article class="service-card" data-service="Business Clearance">
+
+                        <div class="service-icon">
+                            🏢
+                        </div>
+
+                        <h3>
+                            Business Clearance
+                        </h3>
+
+                        <p>
+                            Request barangay clearance for
+                            business-related requirements.
+                        </p>
+
+                        <button type="button" class="service-button">
+                            Request Service
+                        </button>
+
+                    </article>
+
+
+                    <!-- Service card 5 -->
+
+                    <article class="service-card" data-service="Other Services">
+
+                        <div class="service-icon">
+                            📑
+                        </div>
+
+                        <h3>
+                            Other Services
+                        </h3>
+
+                        <p>
+                            Access other available barangay documents
+                            and services for your needs.
+                        </p>
+
+                        <button type="button" class="service-button">
+                            View Services
+                        </button>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about-section page-section" id="about">
+
+            <div class="about-content">
+
+                <p class="section-label">
+                    ABOUT THE PORTAL
+                </p>
+
+                <h2>
+                    Making Barangay Services Easier
+                </h2>
+
+                <p>
+                    The Barangay One-Stop Service Portal provides residents
+                    with a convenient way to access barangay services,
+                    information, and requests in one place.
+                </p>
+
+                <p>
+                    Our goal is to make the process simpler, faster, and
+                    more accessible for every resident of Barangay Parang.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section page-section" id="contact">
+
+            <div class="cta-content">
+
+                <p class="section-label">
+                    GET IN TOUCH
+                </p>
+
+                <h2>
+                    Need a Barangay Service?
+                </h2>
+
+                <p>
+                    Submit your request conveniently through our
+                    Barangay One-Stop Service Portal.
+                </p>
+
+
+                <!-- Contact info -->
+                <div class="contact-information">
+
+                    <div class="contact-item">
+
+                        <span class="contact-icon">
+                            📍
+                        </span>
+
+                        <div>
+                            <strong>
+                                Barangay Hall
+                            </strong>
+
+                            <p>
+                                Barangay Parang
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <span class="contact-icon">
+                            📞
+                        </span>
+
+                        <div>
+                            <strong>
+                                Contact Number
+                            </strong>
+
+                            <p>
+                                Barangay Office Contact
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <span class="contact-icon">
+                            🕐
+                        </span>
+
+                        <div>
+                            <strong>
+                                Office Hours
+                            </strong>
+
+                            <p>
+                                Monday – Friday | 8:00 AM – 5:00 PM
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Contact CTA -->
+                <button type="button" class="cta-button" id="cta-request-button">
+                    Request a Service
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- SERIVCE DETAILS MODAL -->
+    <div class="service-modal" id="service-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+        <div class="service-modal-content">
+
+            <button type="button" class="modal-close" id="modal-close" aria-label="Close service details">
+                &times;
+            </button>
+
+
+            <p class="section-label">
+                SERVICE DETAILS
+            </p>
+
+            <h2 id="modal-title">
+                Barangay Clearance
+            </h2>
+
+            <p id="modal-description">
+                Request a Barangay Clearance for employment,
+                business, and other official requirements.
+            </p>
+
+
+            <h3>
+                Requirements
+            </h3>
+
+            <ul id="modal-requirements">
+                <li>
+                    Valid Government-Issued ID
+                </li>
+
+                <li>
+                    Proof of Residency
+                </li>
+            </ul>
+
+
+            <h3>
+                Processing Information
+            </h3>
+
+            <p id="modal-processing">
+                Processing is subject to barangay office hours
+                and verification.
+            </p>
+
+
+            <button type="button" class="modal-request-button" id="modal-request">
+                Request This Service
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- REQUEST SERVICE MODAL -->
+    <div class="request-modal" id="request-modal" role="dialog" aria-modal="true"
+        aria-labelledby="request-service-title">
+
+        <div class="request-modal-content">
+
+            <button type="button" class="request-modal-close" id="request-modal-close" aria-label="Close request form">
+                &times;
+            </button>
+
+
+            <p class="section-label">
+                REQUEST SERVICE
+            </p>
+
+            <h2 id="request-service-title">
+                Barangay Clearance
+            </h2>
+
+
+            <form id="request-form">
+
+
+                <!-- Full name -->
+                <div class="form-group">
+
+                    <label for="full-name">
+                        Full Name
+                    </label>
+
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name"
+                        autocomplete="name" required>
+
+                </div>
+
+
+                <!-- Address -->
+                <div class="form-group">
+
+                    <label for="address">
+                        Address
+                    </label>
+
+                    <input type="text" id="address" name="address" placeholder="Enter your complete address"
+                        autocomplete="street-address" required>
+
+                </div>
+
+
+                <!-- Contact number -->
+                <div class="form-group">
+
+                    <label for="contact-number">
+                        Contact Number
+                    </label>
+
+                    <input type="tel" id="contact-number" name="contact-number" placeholder="Enter your contact number"
+                        autocomplete="tel" required>
+
+                </div>
+
+
+                <!-- Purpose -->
+                <div class="form-group">
+
+                    <label for="purpose">
+                        Purpose
+                    </label>
+
+                    <input type="text" id="purpose" name="purpose" placeholder="Enter the purpose of your request"
+                        required>
+
+                </div>
+
+
+                <!-- Additional info -->
+                <div class="form-group">
+
+                    <label for="additional-info">
+                        Additional Information
+                    </label>
+
+                    <textarea id="additional-info" name="additional-info" placeholder="Enter additional information"
+                        rows="4"></textarea>
+
+                </div>
+
+
+                <!-- Supporting docs -->
+                <div class="form-group">
+
+                    <label for="supporting-document">
+                        Supporting Document
+                    </label>
+
+                    <input type="file" id="supporting-document" name="supporting-document">
+
+                    <small>
+                        Upload a supporting document if required.
+                    </small>
+
+                </div>
+
+
+                <!-- Submit -->
+                <button type="submit" class="submit-request-button">
+                    Submit Request
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- REQUEST SUCCESS MODAL -->
+    <div class="success-modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title">
+
+        <div class="success-modal-content">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <p class="section-label">
+                REQUEST SUBMITTED
+            </p>
+
+            <h2 id="success-title">
+                Request Submitted Successfully
+            </h2>
+
+            <p class="success-message">
+                Your service request has been submitted successfully.
+            </p>
+
+
+            <div class="request-id-box">
+
+                <span>
+                    Request ID
+                </span>
+
+                <strong id="success-request-id">
+                    REQ-2026-0001
+                </strong>
+
+            </div>
+
+
+            <div class="request-status">
+
+                <span>
+                    Status
+                </span>
+
+                <strong>
+                    Pending Verification
+                </strong>
+
+            </div>
+
+
+            <button type="button" class="success-close-button" id="success-close">
+                Back to Services
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- APPOINTMENT MODAL -->
+    <div class="appointment-modal" id="appointment-modal" role="dialog" aria-modal="true"
+        aria-labelledby="appointment-title">
+
+        <div class="appointment-modal-content">
+
+            <button type="button" class="appointment-modal-close" id="appointment-modal-close"
+                aria-label="Close appointment form">
+                &times;
+            </button>
+
+
+            <p class="section-label">
+                BOOK APPOINTMENT
+            </p>
+
+            <h2 id="appointment-title">
+                Schedule an Appointment
+            </h2>
+
+            <p class="appointment-intro">
+                Choose your preferred service, date, and time
+                for your barangay appointment.
+            </p>
+
+
+            <form id="appointment-form">
+
+
+                <!-- Full name -->
+                <div class="form-group">
+
+                    <label for="appointment-full-name">
+                        Full Name
+                    </label>
+
+                    <input type="text" id="appointment-full-name" name="appointment-full-name"
+                        placeholder="Enter your full name" autocomplete="name" required>
+
+                </div>
+
+
+                <!-- Contact number -->
+                <div class="form-group">
+
+                    <label for="appointment-contact-number">
+                        Contact Number
+                    </label>
+
+                    <input type="tel" id="appointment-contact-number" name="appointment-contact-number"
+                        placeholder="Enter your contact number" autocomplete="tel" required>
+
+                </div>
+
+
+                <!-- Address -->
+                <div class="form-group">
+
+                    <label for="appointment-address">
+                        Address
+                    </label>
+
+                    <input type="text" id="appointment-address" name="appointment-address"
+                        placeholder="Enter your complete address" autocomplete="street-address" required>
+
+                </div>
+
+
+                <!-- Service -->
+                <div class="form-group">
+
+                    <label for="appointment-service">
+                        Service
+                    </label>
+
+                    <select id="appointment-service" name="appointment-service" required>
+
+                        <option value="" selected disabled>
+                            Select a service
+                        </option>
+
+                        <option value="Barangay Clearance">
+                            Barangay Clearance
+                        </option>
+
+                        <option value="Certificate of Residency">
+                            Certificate of Residency
+                        </option>
+
+                        <option value="Barangay Indigency">
+                            Barangay Indigency
+                        </option>
+
+                        <option value="Business Clearance">
+                            Business Clearance
+                        </option>
+
+                        <option value="Other Services">
+                            Other Services
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Date and Time -->
+                <div class="appointment-date-time">
+
+
+                    <!-- Date -->
+                    <div class="form-group">
+
+                        <label for="appointment-date">
+                            Preferred Date
+                        </label>
+
+                        <input type="date" id="appointment-date" name="appointment-date" required>
+
+                    </div>
+
+
+                    <!-- Time -->
+                    <div class="form-group">
+
+                        <label for="appointment-time">
+                            Preferred Time
+                        </label>
+
+                        <select id="appointment-time" name="appointment-time" required>
+
+                            <option value="" selected disabled>
+                                Select time
+                            </option>
+
+                            <option value="8:00 AM">
+                                8:00 AM
+                            </option>
+
+                            <option value="8:30 AM">
+                                8:30 AM
+                            </option>
+
+                            <option value="9:00 AM">
+                                9:00 AM
+                            </option>
+
+                            <option value="9:30 AM">
+                                9:30 AM
+                            </option>
+
+                            <option value="10:00 AM">
+                                10:00 AM
+                            </option>
+
+                            <option value="10:30 AM">
+                                10:30 AM
+                            </option>
+
+                            <option value="11:00 AM">
+                                11:00 AM
+                            </option>
+
+                            <option value="11:30 AM">
+                                11:30 AM
+                            </option>
+
+                            <option value="1:00 PM">
+                                1:00 PM
+                            </option>
+
+                            <option value="1:30 PM">
+                                1:30 PM
+                            </option>
+
+                            <option value="2:00 PM">
+                                2:00 PM
+                            </option>
+
+                            <option value="2:30 PM">
+                                2:30 PM
+                            </option>
+
+                            <option value="3:00 PM">
+                                3:00 PM
+                            </option>
+
+                            <option value="3:30 PM">
+                                3:30 PM
+                            </option>
+
+                            <option value="4:00 PM">
+                                4:00 PM
+                            </option>
+
+                            <option value="4:30 PM">
+                                4:30 PM
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Purpose -->
+                <div class="form-group">
+
+                    <label for="appointment-purpose">
+                        Purpose
+                    </label>
+
+                    <textarea id="appointment-purpose" name="appointment-purpose"
+                        placeholder="Enter the purpose of your appointment" rows="4" required></textarea>
+
+                </div>
+
+
+                <!-- Submit -->
+                <button type="submit" class="submit-appointment-button">
+                    Confirm Appointment
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- APPOINTMENT SUCCESS MODAL -->
+    <div class="appointment-success-modal" id="appointment-success-modal" role="dialog" aria-modal="true"
+        aria-labelledby="appointment-success-title">
+
+        <div class="appointment-success-modal-content">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <p class="section-label">
+                APPOINTMENT CONFIRMED
+            </p>
+
+            <h2 id="appointment-success-title">
+                Appointment Successfully Booked
+            </h2>
+
+            <p class="success-message">
+                Your appointment has been scheduled successfully.
+            </p>
+
+
+            <!-- Appointment ID -->
+            <div class="appointment-id-box">
+
+                <span>
+                    Appointment ID
+                </span>
+
+                <strong id="appointment-id">
+                    APT-2026-0001
+                </strong>
+
+            </div>
+
+
+            <!-- Appointment summ -->
+            <div class="appointment-summary">
+
+
+                <div>
+
+                    <span>
+                        Service
+                    </span>
+
+                    <strong id="confirmed-service">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Date
+                    </span>
+
+                    <strong id="confirmed-date">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Time
+                    </span>
+
+                    <strong id="confirmed-time">
+                        —
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Close -->
+            <button type="button" class="appointment-success-close-button" id="appointment-success-close">
+                Back to Home
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
