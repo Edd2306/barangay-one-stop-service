@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Barangay One-Stop Service Portal</title>
+    <meta name="description"
+        content="Barangay Parang One-Stop Service Portal - Access barangay services, submit requests, book appointments, and stay updated.">
+
+    <title>Barangay Parang | One-Stop Service Portal</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,113 +16,147 @@
 <body>
 
     <!-- SPLASH SCREEN -->
-    <section class="splash-screen">
+    <section class="splash-screen" id="splash-screen">
 
         <div class="splash-overlay"></div>
 
         <div class="splash-content">
 
-            <div class="barangay-logo">
+            <div class="splash-logo">
                 <img src="assets/LogoParang.png" alt="Barangay Parang Logo">
             </div>
 
-            <h2>BARANGAY PARANG</h2>
+            <p class="splash-name">
+                BARANGAY PARANG
+            </p>
 
             <h1>
-                BARANGAY ONE-STOP<br>
                 SERVICE PORTAL
             </h1>
 
-            <p>
-                Modernizing Barangay Services for Everyone
-            </p>
+            <div class="splash-loading" aria-label="Loading">
 
-            <div class="loading">
                 <span></span>
                 <span></span>
                 <span></span>
+
             </div>
 
         </div>
 
     </section>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
+
+    <!--NAVIGATION -->
+    <header class="navbar">
 
         <div class="nav-container">
 
-            <!-- Logo / Barangay Name -->
-            <a href="#home" class="nav-logo">
-                BARANGAY PARANG
-            </a>
-
-            <!-- Mobile Hamburger -->
-            <button type="button" class="hamburger" id="hamburger" aria-label="Open navigation menu"
-                aria-expanded="false" aria-controls="nav-links">
-                ☰
+            <button class="nav-brand" id="nav-brand" type="button">
+                <span>BARANGAY PARANG</span>
+                <small>ONE-STOP SERVICE PORTAL</small>
             </button>
 
-            <!-- Navigation Links -->
-            <div class="nav-links" id="nav-links">
 
-                <a href="#home-section" class="nav-link active">
+            <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <nav class="nav-menu" id="nav-menu">
+
+                <button class="nav-link active" type="button" data-section="home">
                     Home
-                </a>
+                </button>
 
-                <a href="#services" class="nav-link">
-                    Services
-                </a>
+                <button class="nav-link" type="button" data-section="announcements">
+                    Announcement
+                </button>
 
-                <a href="#about" class="nav-link">
+                <button class="nav-link" type="button" data-section="about">
                     About
-                </a>
+                </button>
 
-                <a href="#contact" class="nav-link">
+                <button class="nav-link" type="button" data-section="services">
+                    Services
+                </button>
+
+                <button class="nav-link" type="button" data-section="contact">
                     Contact
-                </a>
+                </button>
 
-            </div>
+            </nav>
 
         </div>
 
-    </nav>
+    </header>
 
-    <!-- MAIN -->
-    <main class="homepage">
 
-        <!-- Welcome Sec (HOME) -->
-        <section class="welcome-section page-section active-section" id="home-section">
+    <!-- MAIN APP -->
+    <main class="app-main">
 
-            <div class="welcome-content">
+        <!-- HOME -->
+        <section class="app-section active" id="home">
 
-                <p class="welcome-label">
+            <div class="home-background"></div>
+            <div class="home-overlay"></div>
+
+            <div class="home-content">
+
+                <div class="home-badge">
+                    BARANGAY PARANG • MARIKINA CITY
+                </div>
+
+                <p class="eyebrow light">
                     WELCOME TO
                 </p>
 
                 <h1>
                     Barangay Parang
+                    <span>One-Stop Service Portal</span>
                 </h1>
 
-                <h2>
-                    Our Barangay One-Stop Service Portal
-                </h2>
-
-                <p class="welcome-description">
-                    Access barangay services, information, and requests
-                    conveniently in one place.
+                <p class="home-description">
+                    Access barangay services, submit requests, book appointments,
+                    and stay updated with important announcements—all in one
+                    convenient online portal.
                 </p>
 
 
-                <!-- Home act btns -->
-                <div class="welcome-buttons">
+                <div class="home-actions">
 
-                    <button type="button" class="primary-button" id="welcome-request-button">
-                        Request a Service
+                    <button class="btn btn-primary" id="get-started-button" type="button">
+                        Get Started
+                        <span>→</span>
                     </button>
 
-                    <button type="button" class="secondary-button" id="appointment-button">
-                        Book an Appointment
+                    <button class="btn btn-outline-light" id="learn-more-button" type="button">
+                        Learn More
+                        <span>↓</span>
+                    </button>
+
+                </div>
+
+
+                <div class="home-quick-links">
+
+                    <button type="button" data-section="services">
+                        <strong>05</strong>
+                        <span>Services</span>
+                    </button>
+
+                    <button type="button" data-section="announcements">
+                        <strong>05</strong>
+                        <span>Announcements</span>
+                    </button>
+
+                    <button type="button" data-section="contact">
+                        <strong>24/7</strong>
+                        <span>Information Access</span>
                     </button>
 
                 </div>
@@ -128,151 +165,301 @@
 
         </section>
 
-        <!-- SERVICES SECTION -->
-        <section class="services-section page-section" id="services">
 
-            <!-- Services Heading -->
-            <div class="section-heading">
+        <!-- =================================================
+             ANNOUNCEMENTS
+        ================================================== -->
 
-                <p class="section-label">
-                    OUR SERVICES
-                </p>
+        <section class="app-section" id="announcements">
 
-                <h2>
-                    Barangay Services
-                </h2>
+            <div class="section-scroll">
 
-                <p>
-                    Access commonly requested barangay documents and
-                    services conveniently through our online portal.
-                </p>
+                <div class="section-container">
 
-            </div>
+                    <div class="section-heading">
 
+                        <div>
 
-            <!-- Services Cards Wrapper -->
-            <div class="services-wrapper">
+                            <p class="eyebrow">
+                                STAY INFORMED
+                            </p>
 
-                <div class="services-container">
+                            <h2>
+                                Latest Announcements
+                            </h2>
 
-
-                    <!-- Service Card 1 -->
-                    <article class="service-card" data-service="Barangay Clearance">
-
-                        <div class="service-icon">
-                            📄
                         </div>
 
+                        <p>
+                            Stay informed with the latest news, updates, programs,
+                            and important notices from Barangay Parang.
+                        </p>
+
+                    </div>
+
+
+                    <div class="announcement-toolbar">
+
+                        <div class="search-box">
+
+                            <span>⌕</span>
+
+                            <input type="search" id="announcement-search" placeholder="Search announcements..."
+                                aria-label="Search announcements">
+
+                        </div>
+
+
+                        <select id="announcement-category" aria-label="Filter announcements">
+
+                            <option value="all">
+                                All Categories
+                            </option>
+
+                            <option value="service">
+                                Services
+                            </option>
+
+                            <option value="health">
+                                Health
+                            </option>
+
+                            <option value="community">
+                                Community
+                            </option>
+
+                            <option value="notice">
+                                Notice
+                            </option>
+
+                            <option value="livelihood">
+                                Livelihood
+                            </option>
+
+                        </select>
+
+
+                        <select id="announcement-sort" aria-label="Sort announcements">
+
+                            <option value="newest">
+                                Newest First
+                            </option>
+
+                            <option value="oldest">
+                                Oldest First
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="announcement-grid" id="announcement-grid">
+
+                        <article class="announcement-card" data-category="service" data-date="2026-08-28">
+
+                            <div class="announcement-icon">
+                                📌
+                            </div>
+
+                            <div class="announcement-body">
+
+                                <span class="announcement-category">
+                                    Services
+                                </span>
+
+                                <h3>
+                                    Barangay Clearance Processing
+                                </h3>
+
+                                <time datetime="2026-08-28">
+                                    August 28, 2026
+                                </time>
+
+                                <p>
+                                    Residents are reminded to prepare the necessary
+                                    requirements when applying for a Barangay Clearance.
+                                    Please visit the Services section for more information.
+                                </p>
+
+                                <button class="read-announcement" type="button">
+                                    Read More →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="announcement-card" data-category="health" data-date="2026-08-25">
+
+                            <div class="announcement-icon">
+                                🏥
+                            </div>
+
+                            <div class="announcement-body">
+
+                                <span class="announcement-category">
+                                    Health
+                                </span>
+
+                                <h3>
+                                    Free Medical Check-Up
+                                </h3>
+
+                                <time datetime="2026-08-25">
+                                    August 25, 2026
+                                </time>
+
+                                <p>
+                                    A free medical check-up will be available for residents
+                                    at the Barangay Health Center. Residents are encouraged
+                                    to register early.
+                                </p>
+
+                                <button class="read-announcement" type="button">
+                                    Read More →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="announcement-card" data-category="community" data-date="2026-08-22">
+
+                            <div class="announcement-icon">
+                                🧹
+                            </div>
+
+                            <div class="announcement-body">
+
+                                <span class="announcement-category">
+                                    Community
+                                </span>
+
+                                <h3>
+                                    Community Clean-Up Drive
+                                </h3>
+
+                                <time datetime="2026-08-22">
+                                    August 22, 2026
+                                </time>
+
+                                <p>
+                                    Join our community clean-up drive and help keep
+                                    Barangay Parang clean, safe, and beautiful.
+                                </p>
+
+                                <button class="read-announcement" type="button">
+                                    Read More →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="announcement-card" data-category="notice" data-date="2026-08-20">
+
+                            <div class="announcement-icon">
+                                📢
+                            </div>
+
+                            <div class="announcement-body">
+
+                                <span class="announcement-category">
+                                    Notice
+                                </span>
+
+                                <h3>
+                                    Barangay Assembly Notice
+                                </h3>
+
+                                <time datetime="2026-08-20">
+                                    August 20, 2026
+                                </time>
+
+                                <p>
+                                    All residents are invited to attend the upcoming
+                                    Barangay Assembly. Important community updates
+                                    and concerns will be discussed.
+                                </p>
+
+                                <button class="read-announcement" type="button">
+                                    Read More →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="announcement-card" data-category="livelihood" data-date="2026-08-18">
+
+                            <div class="announcement-icon">
+                                💼
+                            </div>
+
+                            <div class="announcement-body">
+
+                                <span class="announcement-category">
+                                    Livelihood
+                                </span>
+
+                                <h3>
+                                    Livelihood Program Registration
+                                </h3>
+
+                                <time datetime="2026-08-18">
+                                    August 18, 2026
+                                </time>
+
+                                <p>
+                                    Registration is now open for residents interested
+                                    in participating in the barangay's livelihood and
+                                    skills development programs.
+                                </p>
+
+                                <button class="read-announcement" type="button">
+                                    Read More →
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="empty-state" id="announcement-empty">
+
+                        <div>🔎</div>
+
                         <h3>
-                            Barangay Clearance
+                            No announcements found
                         </h3>
 
                         <p>
-                            Request a Barangay Clearance for employment,
-                            business, and other official requirements.
+                            Try another search term or category.
                         </p>
 
-                        <button type="button" class="service-button">
-                            Request Service
-                        </button>
-
-                    </article>
+                    </div>
 
 
-                    <!-- Service Card 2 -->
-                    <article class="service-card" data-service="Certificate of Residency">
+                    <div class="announcement-footer">
 
-                        <div class="service-icon">
-                            🏠
+                        <div class="announcement-dots">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
                         </div>
 
-                        <h3>
-                            Certificate of Residency
-                        </h3>
-
-                        <p>
-                            Request a Barangay Certificate of Residency
-                            for various official purposes.
-                        </p>
-
-                        <button type="button" class="service-button">
-                            Request Service
+                        <button class="btn btn-green" id="view-all-announcements" type="button">
+                            View All Announcements →
                         </button>
 
-                    </article>
-
-
-                    <!-- Service card 3 -->
-
-                    <article class="service-card" data-service="Barangay Indigency">
-
-                        <div class="service-icon">
-                            📋
-                        </div>
-
-                        <h3>
-                            Barangay Indigency
-                        </h3>
-
-                        <p>
-                            Request a Barangay Certificate of Indigency
-                            for various official purposes.
-                        </p>
-
-                        <button type="button" class="service-button">
-                            Request Service
-                        </button>
-
-                    </article>
-
-
-                    <!-- Service card 4 -->
-
-                    <article class="service-card" data-service="Business Clearance">
-
-                        <div class="service-icon">
-                            🏢
-                        </div>
-
-                        <h3>
-                            Business Clearance
-                        </h3>
-
-                        <p>
-                            Request barangay clearance for
-                            business-related requirements.
-                        </p>
-
-                        <button type="button" class="service-button">
-                            Request Service
-                        </button>
-
-                    </article>
-
-
-                    <!-- Service card 5 -->
-
-                    <article class="service-card" data-service="Other Services">
-
-                        <div class="service-icon">
-                            📑
-                        </div>
-
-                        <h3>
-                            Other Services
-                        </h3>
-
-                        <p>
-                            Access other available barangay documents
-                            and services for your needs.
-                        </p>
-
-                        <button type="button" class="service-button">
-                            View Services
-                        </button>
-
-                    </article>
-
+                    </div>
 
                 </div>
 
@@ -280,119 +467,773 @@
 
         </section>
 
-        <!-- ABOUT SECTION -->
-        <section class="about-section page-section" id="about">
 
-            <div class="about-content">
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
 
-                <p class="section-label">
-                    ABOUT THE PORTAL
-                </p>
+        <section class="app-section" id="about">
 
-                <h2>
-                    Making Barangay Services Easier
-                </h2>
+            <div class="section-scroll">
 
-                <p>
-                    The Barangay One-Stop Service Portal provides residents
-                    with a convenient way to access barangay services,
-                    information, and requests in one place.
-                </p>
+                <div class="section-container">
 
-                <p>
-                    Our goal is to make the process simpler, faster, and
-                    more accessible for every resident of Barangay Parang.
-                </p>
+                    <div class="section-heading centered">
+
+                        <p class="eyebrow">
+                            ABOUT BARANGAY PARANG
+                        </p>
+
+                        <h2>
+                            Our Community
+                        </h2>
+
+                        <p>
+                            Learn more about our community, our commitment to
+                            public service, and the people working for Barangay Parang.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-feature">
+
+                        <div class="about-feature-icon">
+                            🏘️
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Our Community
+                            </h3>
+
+                            <p>
+                                Barangay Parang is a vibrant and growing community
+                                in Marikina City, built on unity, cooperation, and
+                                public service. Together, residents and local leaders
+                                work toward a safe, inclusive, and progressive community.
+                            </p>
+
+                            <p>
+                                Our portal makes essential barangay services and
+                                information more accessible and convenient for everyone.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-grid">
+
+                        <article class="info-card">
+
+                            <div class="info-card-icon">
+                                🎯
+                            </div>
+
+                            <h3>
+                                Mission & Vision
+                            </h3>
+
+                            <div class="mission-vision">
+
+                                <div>
+
+                                    <strong>
+                                        Mission
+                                    </strong>
+
+                                    <p>
+                                        To provide accessible, efficient, and reliable
+                                        barangay services while promoting responsive
+                                        governance, community participation, and the
+                                        overall welfare of the residents of Barangay Parang.
+                                    </p>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Vision
+                                    </strong>
+
+                                    <p>
+                                        A progressive, safe, and digitally connected
+                                        Barangay Parang where residents have convenient
+                                        access to quality public services and actively
+                                        participate in building a stronger community.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="info-card">
+
+                            <div class="info-card-icon">
+                                🤝
+                            </div>
+
+                            <h3>
+                                Public Service
+                            </h3>
+
+                            <p>
+                                We are committed to providing accessible, reliable,
+                                and efficient services that respond to the needs of
+                                every resident.
+                            </p>
+
+                            <p>
+                                Through digital solutions, we aim to make barangay
+                                services faster, simpler, and more convenient for
+                                the community.
+                            </p>
+
+                            <div class="service-commitment">
+                                <span>Accessible</span>
+                                <span>Reliable</span>
+                                <span>Efficient</span>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="officials-section">
+
+                        <div class="officials-heading">
+
+                            <p class="eyebrow">
+                                PUBLIC OFFICIALS
+                            </p>
+
+                            <h2>
+                                City & Barangay Officials
+                            </h2>
+
+                            <p>
+                                The public servants helping guide our community
+                                toward a safe and progressive future.
+                            </p>
+
+                        </div>
+
+
+                        <div class="official-group">
+
+                            <h3>
+                                City Government of Marikina
+                            </h3>
+
+                            <div class="official-grid">
+
+                                <article class="official-card featured">
+
+                                    <div class="official-avatar">
+                                        MA
+                                    </div>
+
+                                    <h4>
+                                        Hon. Marjorie Ann A. Teodoro
+                                    </h4>
+
+                                    <p>
+                                        City Mayor
+                                    </p>
+
+                                </article>
+
+
+                                <article class="official-card">
+
+                                    <div class="official-avatar">
+                                        DG
+                                    </div>
+
+                                    <h4>
+                                        Hon. Del R. De Guzman
+                                    </h4>
+
+                                    <p>
+                                        City Vice Mayor
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="official-group">
+
+                            <h3>
+                                Barangay Parang Officials
+                            </h3>
+
+                            <div class="official-grid">
+
+                                <article class="official-card featured">
+
+                                    <div class="official-avatar">
+                                        RZ
+                                    </div>
+
+                                    <h4>
+                                        Hon. Ronald D. Zulieta
+                                    </h4>
+
+                                    <p>
+                                        Punong Barangay
+                                    </p>
+
+                                </article>
+
+
+                                <article class="official-card">
+
+                                    <div class="official-avatar">
+                                        WA
+                                    </div>
+
+                                    <h4>
+                                        Hon. Wilfredo A. Amacio
+                                    </h4>
+
+                                    <p>
+                                        Barangay Kagawad
+                                    </p>
+
+                                </article>
+
+
+                                <article class="official-card">
+
+                                    <div class="official-avatar">
+                                        RA
+                                    </div>
+
+                                    <h4>
+                                        Hon. Rizaldy R. Angeles
+                                    </h4>
+
+                                    <p>
+                                        Barangay Kagawad
+                                    </p>
+
+                                </article>
+
+
+                                <article class="official-card">
+
+                                    <div class="official-avatar">
+                                        FS
+                                    </div>
+
+                                    <h4>
+                                        Hon. Federico S. Sinlao
+                                    </h4>
+
+                                    <p>
+                                        Barangay Kagawad
+                                    </p>
+
+                                </article>
+
+
+                                <article class="official-card">
+
+                                    <div class="official-avatar">
+                                        DS
+                                    </div>
+
+                                    <h4>
+                                        Hon. Dennis S. Santiago
+                                    </h4>
+
+                                    <p>
+                                        Barangay Kagawad
+                                    </p>
+
+                                </article>
+
+
+                                <article class="official-card">
+
+                                    <div class="official-avatar">
+                                        BS
+                                    </div>
+
+                                    <h4>
+                                        Hon. Billy S. Bautista
+                                    </h4>
+
+                                    <p>
+                                        Barangay Kagawad
+                                    </p>
+
+                                </article>
+
+
+                                <article class="official-card">
+
+                                    <div class="official-avatar">
+                                        ND
+                                    </div>
+
+                                    <h4>
+                                        Hon. Nepomuceno S. De Leon
+                                    </h4>
+
+                                    <p>
+                                        Barangay Kagawad
+                                    </p>
+
+                                </article>
+
+
+                                <article class="official-card">
+
+                                    <div class="official-avatar">
+                                        JS
+                                    </div>
+
+                                    <h4>
+                                        Hon. Julia Iyanla M. Santoyo
+                                    </h4>
+
+                                    <p>
+                                        SK Chairperson
+                                    </p>
+
+                                </article>
+
+
+                                <article class="official-card">
+
+                                    <div class="official-avatar">
+                                        TF
+                                    </div>
+
+                                    <h4>
+                                        Ma. Teresa P. Florencio
+                                    </h4>
+
+                                    <p>
+                                        Barangay Secretary
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </section>
 
-        <!-- CTA -->
-        <section class="cta-section page-section" id="contact">
 
-            <div class="cta-content">
+        <!-- =================================================
+             SERVICES
+        ================================================== -->
 
-                <p class="section-label">
-                    GET IN TOUCH
-                </p>
+        <section class="app-section" id="services">
 
-                <h2>
-                    Need a Barangay Service?
-                </h2>
+            <div class="section-scroll">
 
-                <p>
-                    Submit your request conveniently through our
-                    Barangay One-Stop Service Portal.
-                </p>
+                <div class="section-container">
+
+                    <div class="section-heading centered">
+
+                        <p class="eyebrow">
+                            BARANGAY SERVICES
+                        </p>
+
+                        <h2>
+                            Services at Your Fingertips
+                        </h2>
+
+                        <p>
+                            Request essential documents, submit service applications,
+                            and track the progress of your transactions online.
+                        </p>
+
+                    </div>
 
 
-                <!-- Contact info -->
-                <div class="contact-information">
+                    <div class="service-grid">
 
-                    <div class="contact-item">
+                        <article class="service-card" data-service="Barangay Clearance">
 
-                        <span class="contact-icon">
-                            📍
-                        </span>
+                            <div class="service-card-top">
+                                <span class="service-icon">📄</span>
+                                <span class="service-number">01</span>
+                            </div>
+
+                            <h3>
+                                Barangay Clearance
+                            </h3>
+
+                            <p>
+                                Request a Barangay Clearance for employment,
+                                business, and other official requirements.
+                            </p>
+
+                            <button class="service-action" type="button">
+                                Request Service →
+                            </button>
+
+                        </article>
+
+
+                        <article class="service-card" data-service="Certificate of Residency">
+
+                            <div class="service-card-top">
+                                <span class="service-icon">🏠</span>
+                                <span class="service-number">02</span>
+                            </div>
+
+                            <h3>
+                                Certificate of Residency
+                            </h3>
+
+                            <p>
+                                Request a Certificate of Residency for various
+                                official and personal requirements.
+                            </p>
+
+                            <button class="service-action" type="button">
+                                Request Service →
+                            </button>
+
+                        </article>
+
+
+                        <article class="service-card" data-service="Barangay Indigency">
+
+                            <div class="service-card-top">
+                                <span class="service-icon">📋</span>
+                                <span class="service-number">03</span>
+                            </div>
+
+                            <h3>
+                                Barangay Indigency
+                            </h3>
+
+                            <p>
+                                Request a Certificate of Indigency for
+                                qualified residents and official purposes.
+                            </p>
+
+                            <button class="service-action" type="button">
+                                Request Service →
+                            </button>
+
+                        </article>
+
+
+                        <article class="service-card" data-service="Business Clearance">
+
+                            <div class="service-card-top">
+                                <span class="service-icon">🏢</span>
+                                <span class="service-number">04</span>
+                            </div>
+
+                            <h3>
+                                Business Clearance
+                            </h3>
+
+                            <p>
+                                Request barangay clearance for business-related
+                                requirements and transactions.
+                            </p>
+
+                            <button class="service-action" type="button">
+                                Request Service →
+                            </button>
+
+                        </article>
+
+
+                        <article class="service-card" data-service="Other Services">
+
+                            <div class="service-card-top">
+                                <span class="service-icon">📑</span>
+                                <span class="service-number">05</span>
+                            </div>
+
+                            <h3>
+                                Other Services
+                            </h3>
+
+                            <p>
+                                Explore other available barangay documents
+                                and services for your needs.
+                            </p>
+
+                            <button class="service-action" type="button">
+                                View Services →
+                            </button>
+
+                        </article>
+
+
+                        <article class="track-card">
+
+                            <div class="track-card-icon">
+                                🔎
+                            </div>
+
+                            <div>
+
+                                <span class="eyebrow light">
+                                    REQUEST STATUS
+                                </span>
+
+                                <h3>
+                                    Track Your Request
+                                </h3>
+
+                                <p>
+                                    Check the current status and progress
+                                    of your submitted barangay request.
+                                </p>
+
+                            </div>
+
+                            <button class="btn btn-white" id="track-request-button" type="button">
+                                Track Request →
+                            </button>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="services-bottom">
 
                         <div>
                             <strong>
+                                Need an appointment?
+                            </strong>
+
+                            <span>
+                                Schedule your visit before going to the barangay hall.
+                            </span>
+                        </div>
+
+                        <button class="btn btn-green" id="appointment-button" type="button">
+                            Book an Appointment
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+        <section class="app-section" id="contact">
+
+            <div class="section-scroll">
+
+                <div class="section-container">
+
+                    <div class="contact-header">
+
+                        <div>
+
+                            <p class="eyebrow">
+                                GET IN TOUCH
+                            </p>
+
+                            <h2>
+                                Contact Us
+                            </h2>
+
+                        </div>
+
+                        <p>
+                            Have questions, concerns, or need assistance with
+                            a barangay service? We're here to help.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-grid">
+
+                        <article class="contact-card">
+
+                            <div class="contact-card-icon">
+                                📍
+                            </div>
+
+                            <span>
+                                LOCATION
+                            </span>
+
+                            <h3>
                                 Barangay Hall
-                            </strong>
+                            </h3>
 
                             <p>
-                                Barangay Parang
+                                <strong>Barangay Parang</strong><br>
+                                B.G. Molina St., Marikina City,<br>
+                                Metro Manila
                             </p>
+
+                        </article>
+
+
+                        <article class="contact-card">
+
+                            <div class="contact-card-icon">
+                                ☎️
+                            </div>
+
+                            <span>
+                                CONTACT
+                            </span>
+
+                            <h3>
+                                Contact Numbers
+                            </h3>
+
+                            <p>
+                                <strong>Barangay Hall:</strong> 8570-1643<br>
+                                <strong>Mobile:</strong> 0915-857-7965<br>
+                                0949-951-5038
+                            </p>
+
+                        </article>
+
+
+                        <article class="contact-card">
+
+                            <div class="contact-card-icon">
+                                ✉️
+                            </div>
+
+                            <span>
+                                EMAIL
+                            </span>
+
+                            <h3>
+                                Email Address
+                            </h3>
+
+                            <p>
+                                Barangay Parang<br>
+                                Official communication channel
+                            </p>
+
+                        </article>
+
+
+                        <article class="contact-card">
+
+                            <div class="contact-card-icon">
+                                🕐
+                            </div>
+
+                            <span>
+                                OFFICE HOURS
+                            </span>
+
+                            <h3>
+                                Monday – Friday
+                            </h3>
+
+                            <p>
+                                <strong>8:00 AM – 5:00 PM</strong><br>
+                                Office hours may vary during holidays.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="emergency-panel">
+
+                        <div class="emergency-icon">
+                            🚨
+                        </div>
+
+                        <div>
+
+                            <span>
+                                EMERGENCY ASSISTANCE
+                            </span>
+
+                            <h3>
+                                Marikina Rescue: <strong>161</strong>
+                            </h3>
+
+                            <p>
+                                Emergency Hotline: <strong>911</strong>
+                            </p>
+
                         </div>
 
                     </div>
 
 
-                    <div class="contact-item">
-
-                        <span class="contact-icon">
-                            📞
-                        </span>
+                    <div class="visit-panel">
 
                         <div>
-                            <strong>
-                                Contact Number
-                            </strong>
+
+                            <p class="eyebrow">
+                                VISIT US
+                            </p>
+
+                            <h2>
+                                We're here to serve the community.
+                            </h2>
 
                             <p>
-                                Barangay Office Contact
+                                For transactions requiring in-person verification
+                                or document submission, residents may visit the
+                                Barangay Hall during office hours.
                             </p>
+
                         </div>
 
-                    </div>
+                        <div class="visit-actions">
 
+                            <button class="btn btn-green" id="contact-request-button" type="button">
+                                Request a Service →
+                            </button>
 
-                    <div class="contact-item">
+                            <button class="btn btn-outline-green" id="contact-appointment-button" type="button">
+                                Book an Appointment
+                            </button>
 
-                        <span class="contact-icon">
-                            🕐
-                        </span>
-
-                        <div>
-                            <strong>
-                                Office Hours
-                            </strong>
-
-                            <p>
-                                Monday – Friday | 8:00 AM – 5:00 PM
-                            </p>
                         </div>
 
                     </div>
 
                 </div>
-
-
-                <!-- Contact CTA -->
-                <button type="button" class="cta-button" id="cta-request-button">
-                    Request a Service
-                </button>
 
             </div>
 
@@ -400,170 +1241,200 @@
 
     </main>
 
-    <!-- SERIVCE DETAILS MODAL -->
-    <div class="service-modal" id="service-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
 
-        <div class="service-modal-content">
-
-            <button type="button" class="modal-close" id="modal-close" aria-label="Close service details">
-                &times;
+    <!--LEARN MORE MODAL -->
+    <div class="modal" id="learn-more-modal">
+        <div class="modal-box learn-more-box">
+            <button class="modal-close" type="button" data-close-modal>
+                ×
             </button>
 
+            <span class="modal-label">
+                ABOUT BARANGAY PARANG
+            </span>
 
-            <p class="section-label">
-                SERVICE DETAILS
-            </p>
+            <div class="modal-icon">
+                🏘️
+            </div>
 
-            <h2 id="modal-title">
+            <h2>
+                About Our Community
+            </h2>
+
+            <div class="learn-more-content">
+                <p>
+                    Barangay Parang is one of the established communities in Marikina City, Metro Manila. Its history is
+                    closely connected to the development and growth of Marikina as a city. Over the years, Barangay
+                    Parang has grown from a developing residential community into a vibrant and progressive
+                    neighborhood, with its population and local establishments continuing to expand.
+                </p>
+
+                <p>
+                    As the community developed, the barangay continued to strengthen its public services and programs to
+                    address the needs of its residents. Today, Barangay Parang remains committed to promoting community
+                    welfare, maintaining peace and order, supporting local development, and providing accessible
+                    services to its constituents.
+                </p>
+
+                <p>
+                    The Barangay One-Stop Service Portal represents a step toward a more convenient and modern way of
+                    serving the community, allowing residents to access essential barangay services, submit requests,
+                    book appointments, and receive important information online.
+                </p>
+            </div>
+
+            <button class="btn btn-green full-width" type="button" data-close-modal>
+                Close
+            </button>
+        </div>
+    </div>
+
+
+    <!-- SERVICE DETAILS MODAL -->
+    <div class="modal" id="service-modal">
+
+        <div class="modal-box service-details-box">
+
+            <button class="modal-close" type="button" data-close-modal>
+                ×
+            </button>
+
+            <span class="modal-label">
+                SERVICE INFORMATION
+            </span>
+
+            <div class="modal-icon" id="service-modal-icon">
+                📄
+            </div>
+
+            <h2 id="service-modal-title">
                 Barangay Clearance
             </h2>
 
-            <p id="modal-description">
+            <p id="service-modal-description">
                 Request a Barangay Clearance for employment,
                 business, and other official requirements.
             </p>
 
+            <div class="requirements-box">
 
-            <h3>
-                Requirements
-            </h3>
+                <h3>
+                    Common Requirements
+                </h3>
 
-            <ul id="modal-requirements">
-                <li>
-                    Valid Government-Issued ID
-                </li>
+                <ul id="service-requirements">
 
-                <li>
-                    Proof of Residency
-                </li>
-            </ul>
+                    <li>
+                        Valid Government-Issued ID
+                    </li>
 
+                    <li>
+                        Proof of Residency
+                    </li>
 
-            <h3>
-                Processing Information
-            </h3>
+                    <li>
+                        Completed request information
+                    </li>
 
-            <p id="modal-processing">
-                Processing is subject to barangay office hours
-                and verification.
-            </p>
+                </ul>
 
+            </div>
 
-            <button type="button" class="modal-request-button" id="modal-request">
-                Request This Service
+            <button class="btn btn-green full-width" id="modal-request-button" type="button">
+                Request This Service →
             </button>
 
         </div>
 
     </div>
 
-    <!-- REQUEST SERVICE MODAL -->
-    <div class="request-modal" id="request-modal" role="dialog" aria-modal="true"
-        aria-labelledby="request-service-title">
 
-        <div class="request-modal-content">
+    <!-- REQUEST MODAL -->
+    <div class="modal" id="request-modal">
 
-            <button type="button" class="request-modal-close" id="request-modal-close" aria-label="Close request form">
-                &times;
+        <div class="modal-box form-box">
+
+            <button class="modal-close" type="button" data-close-modal>
+                ×
             </button>
 
+            <span class="modal-label">
+                REQUEST A SERVICE
+            </span>
 
-            <p class="section-label">
-                REQUEST SERVICE
-            </p>
-
-            <h2 id="request-service-title">
+            <h2 id="request-title">
                 Barangay Clearance
             </h2>
+
+            <p class="modal-subtitle">
+                Provide the information below to submit your service request.
+            </p>
 
 
             <form id="request-form">
 
+                <div class="form-grid">
 
-                <!-- Full name -->
-                <div class="form-group">
+                    <div class="form-field">
 
-                    <label for="full-name">
-                        Full Name
-                    </label>
+                        <label for="request-name">
+                            Full Name
+                        </label>
 
-                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name"
-                        autocomplete="name" required>
+                        <input id="request-name" type="text" placeholder="Enter your full name" required>
 
-                </div>
-
-
-                <!-- Address -->
-                <div class="form-group">
-
-                    <label for="address">
-                        Address
-                    </label>
-
-                    <input type="text" id="address" name="address" placeholder="Enter your complete address"
-                        autocomplete="street-address" required>
-
-                </div>
+                    </div>
 
 
-                <!-- Contact number -->
-                <div class="form-group">
+                    <div class="form-field">
 
-                    <label for="contact-number">
-                        Contact Number
-                    </label>
+                        <label for="request-contact">
+                            Contact Number
+                        </label>
 
-                    <input type="tel" id="contact-number" name="contact-number" placeholder="Enter your contact number"
-                        autocomplete="tel" required>
+                        <input id="request-contact" type="tel" placeholder="Enter your contact number" required>
+
+                    </div>
 
                 </div>
 
 
-                <!-- Purpose -->
-                <div class="form-group">
+                <div class="form-field">
 
-                    <label for="purpose">
+                    <label for="request-address">
+                        Complete Address
+                    </label>
+
+                    <input id="request-address" type="text" placeholder="Enter your complete address" required>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="request-purpose">
                         Purpose
                     </label>
 
-                    <input type="text" id="purpose" name="purpose" placeholder="Enter the purpose of your request"
-                        required>
+                    <input id="request-purpose" type="text" placeholder="Enter the purpose of your request" required>
 
                 </div>
 
 
-                <!-- Additional info -->
-                <div class="form-group">
+                <div class="form-field">
 
-                    <label for="additional-info">
+                    <label for="request-additional">
                         Additional Information
                     </label>
 
-                    <textarea id="additional-info" name="additional-info" placeholder="Enter additional information"
-                        rows="4"></textarea>
+                    <textarea id="request-additional" rows="4"
+                        placeholder="Additional information (optional)"></textarea>
 
                 </div>
 
 
-                <!-- Supporting docs -->
-                <div class="form-group">
-
-                    <label for="supporting-document">
-                        Supporting Document
-                    </label>
-
-                    <input type="file" id="supporting-document" name="supporting-document">
-
-                    <small>
-                        Upload a supporting document if required.
-                    </small>
-
-                </div>
-
-
-                <!-- Submit -->
-                <button type="submit" class="submit-request-button">
-                    Submit Request
+                <button class="btn btn-green full-width" type="submit">
+                    Submit Request →
                 </button>
 
             </form>
@@ -572,160 +1443,151 @@
 
     </div>
 
-    <!-- REQUEST SUCCESS MODAL -->
-    <div class="success-modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title">
 
-        <div class="success-modal-content">
+    <!-- REQUEST RECEIPT -->
+    <div class="modal" id="receipt-modal">
 
-            <div class="success-icon">
+        <div class="modal-box receipt-box">
+
+            <div class="receipt-success">
                 ✓
             </div>
 
-            <p class="section-label">
-                REQUEST SUBMITTED
-            </p>
+            <span class="modal-label">
+                REQUEST RECEIPT
+            </span>
 
-            <h2 id="success-title">
-                Request Submitted Successfully
+            <h2>
+                Request Submitted
             </h2>
 
-            <p class="success-message">
-                Your service request has been submitted successfully.
+            <p>
+                Your request has been successfully recorded.
+                Keep your Request ID for tracking.
             </p>
 
 
-            <div class="request-id-box">
+            <div class="receipt-id">
 
                 <span>
-                    Request ID
+                    REQUEST ID
                 </span>
 
-                <strong id="success-request-id">
+                <strong id="receipt-request-id">
                     REQ-2026-0001
                 </strong>
 
             </div>
 
 
-            <div class="request-status">
+            <div class="receipt-details">
 
-                <span>
-                    Status
-                </span>
+                <div>
+                    <span>Service</span>
+                    <strong id="receipt-service">—</strong>
+                </div>
 
-                <strong>
-                    Pending Verification
-                </strong>
+                <div>
+                    <span>Name</span>
+                    <strong id="receipt-name">—</strong>
+                </div>
+
+                <div>
+                    <span>Status</span>
+                    <strong>Pending Verification</strong>
+                </div>
 
             </div>
 
 
-            <button type="button" class="success-close-button" id="success-close">
-                Back to Services
+            <button class="btn btn-green full-width" type="button" data-close-modal>
+                Done
             </button>
 
         </div>
 
     </div>
 
+
     <!-- APPOINTMENT MODAL -->
-    <div class="appointment-modal" id="appointment-modal" role="dialog" aria-modal="true"
-        aria-labelledby="appointment-title">
+    <div class="modal" id="appointment-modal">
 
-        <div class="appointment-modal-content">
+        <div class="modal-box form-box">
 
-            <button type="button" class="appointment-modal-close" id="appointment-modal-close"
-                aria-label="Close appointment form">
-                &times;
+            <button class="modal-close" type="button" data-close-modal>
+                ×
             </button>
 
+            <span class="modal-label">
+                BOOK AN APPOINTMENT
+            </span>
 
-            <p class="section-label">
-                BOOK APPOINTMENT
-            </p>
-
-            <h2 id="appointment-title">
-                Schedule an Appointment
+            <h2>
+                Schedule Your Visit
             </h2>
 
-            <p class="appointment-intro">
-                Choose your preferred service, date, and time
-                for your barangay appointment.
+            <p class="modal-subtitle">
+                Choose your preferred service, date, and time.
             </p>
 
 
             <form id="appointment-form">
 
+                <div class="form-grid">
 
-                <!-- Full name -->
-                <div class="form-group">
+                    <div class="form-field">
 
-                    <label for="appointment-full-name">
-                        Full Name
-                    </label>
+                        <label for="appointment-name">
+                            Full Name
+                        </label>
 
-                    <input type="text" id="appointment-full-name" name="appointment-full-name"
-                        placeholder="Enter your full name" autocomplete="name" required>
+                        <input id="appointment-name" type="text" placeholder="Enter your full name" required>
 
-                </div>
-
-
-                <!-- Contact number -->
-                <div class="form-group">
-
-                    <label for="appointment-contact-number">
-                        Contact Number
-                    </label>
-
-                    <input type="tel" id="appointment-contact-number" name="appointment-contact-number"
-                        placeholder="Enter your contact number" autocomplete="tel" required>
-
-                </div>
+                    </div>
 
 
-                <!-- Address -->
-                <div class="form-group">
+                    <div class="form-field">
 
-                    <label for="appointment-address">
-                        Address
-                    </label>
+                        <label for="appointment-contact">
+                            Contact Number
+                        </label>
 
-                    <input type="text" id="appointment-address" name="appointment-address"
-                        placeholder="Enter your complete address" autocomplete="street-address" required>
+                        <input id="appointment-contact" type="tel" placeholder="Enter your contact number" required>
+
+                    </div>
 
                 </div>
 
 
-                <!-- Service -->
-                <div class="form-group">
+                <div class="form-field">
 
                     <label for="appointment-service">
                         Service
                     </label>
 
-                    <select id="appointment-service" name="appointment-service" required>
+                    <select id="appointment-service" required>
 
-                        <option value="" selected disabled>
+                        <option value="" disabled selected>
                             Select a service
                         </option>
 
-                        <option value="Barangay Clearance">
+                        <option>
                             Barangay Clearance
                         </option>
 
-                        <option value="Certificate of Residency">
+                        <option>
                             Certificate of Residency
                         </option>
 
-                        <option value="Barangay Indigency">
+                        <option>
                             Barangay Indigency
                         </option>
 
-                        <option value="Business Clearance">
+                        <option>
                             Business Clearance
                         </option>
 
-                        <option value="Other Services">
+                        <option>
                             Other Services
                         </option>
 
@@ -734,98 +1596,47 @@
                 </div>
 
 
-                <!-- Date and Time -->
-                <div class="appointment-date-time">
+                <div class="form-grid">
 
-
-                    <!-- Date -->
-                    <div class="form-group">
+                    <div class="form-field">
 
                         <label for="appointment-date">
                             Preferred Date
                         </label>
 
-                        <input type="date" id="appointment-date" name="appointment-date" required>
+                        <input id="appointment-date" type="date" required>
 
                     </div>
 
 
-                    <!-- Time -->
-                    <div class="form-group">
+                    <div class="form-field">
 
                         <label for="appointment-time">
                             Preferred Time
                         </label>
 
-                        <select id="appointment-time" name="appointment-time" required>
+                        <select id="appointment-time" required>
 
-                            <option value="" selected disabled>
+                            <option value="" disabled selected>
                                 Select time
                             </option>
 
-                            <option value="8:00 AM">
-                                8:00 AM
-                            </option>
-
-                            <option value="8:30 AM">
-                                8:30 AM
-                            </option>
-
-                            <option value="9:00 AM">
-                                9:00 AM
-                            </option>
-
-                            <option value="9:30 AM">
-                                9:30 AM
-                            </option>
-
-                            <option value="10:00 AM">
-                                10:00 AM
-                            </option>
-
-                            <option value="10:30 AM">
-                                10:30 AM
-                            </option>
-
-                            <option value="11:00 AM">
-                                11:00 AM
-                            </option>
-
-                            <option value="11:30 AM">
-                                11:30 AM
-                            </option>
-
-                            <option value="1:00 PM">
-                                1:00 PM
-                            </option>
-
-                            <option value="1:30 PM">
-                                1:30 PM
-                            </option>
-
-                            <option value="2:00 PM">
-                                2:00 PM
-                            </option>
-
-                            <option value="2:30 PM">
-                                2:30 PM
-                            </option>
-
-                            <option value="3:00 PM">
-                                3:00 PM
-                            </option>
-
-                            <option value="3:30 PM">
-                                3:30 PM
-                            </option>
-
-                            <option value="4:00 PM">
-                                4:00 PM
-                            </option>
-
-                            <option value="4:30 PM">
-                                4:30 PM
-                            </option>
+                            <option>8:00 AM</option>
+                            <option>8:30 AM</option>
+                            <option>9:00 AM</option>
+                            <option>9:30 AM</option>
+                            <option>10:00 AM</option>
+                            <option>10:30 AM</option>
+                            <option>11:00 AM</option>
+                            <option>11:30 AM</option>
+                            <option>1:00 PM</option>
+                            <option>1:30 PM</option>
+                            <option>2:00 PM</option>
+                            <option>2:30 PM</option>
+                            <option>3:00 PM</option>
+                            <option>3:30 PM</option>
+                            <option>4:00 PM</option>
+                            <option>4:30 PM</option>
 
                         </select>
 
@@ -834,22 +1645,20 @@
                 </div>
 
 
-                <!-- Purpose -->
-                <div class="form-group">
+                <div class="form-field">
 
                     <label for="appointment-purpose">
                         Purpose
                     </label>
 
-                    <textarea id="appointment-purpose" name="appointment-purpose"
-                        placeholder="Enter the purpose of your appointment" rows="4" required></textarea>
+                    <textarea id="appointment-purpose" rows="4" placeholder="Enter the purpose of your appointment"
+                        required></textarea>
 
                 </div>
 
 
-                <!-- Submit -->
-                <button type="submit" class="submit-appointment-button">
-                    Confirm Appointment
+                <button class="btn btn-green full-width" type="submit">
+                    Confirm Appointment →
                 </button>
 
             </form>
@@ -858,92 +1667,312 @@
 
     </div>
 
-    <!-- APPOINTMENT SUCCESS MODAL -->
-    <div class="appointment-success-modal" id="appointment-success-modal" role="dialog" aria-modal="true"
-        aria-labelledby="appointment-success-title">
 
-        <div class="appointment-success-modal-content">
-
-            <div class="success-icon">
+    <!-- APPOINTMENT RECEIPT -->
+    <div class="modal" id="appointment-receipt-modal">
+        <div class="modal-box receipt-box appointment-receipt-box">
+            <div class="receipt-success">
                 ✓
             </div>
 
-            <p class="section-label">
-                APPOINTMENT CONFIRMED
-            </p>
+            <span class="modal-label">
+                APPOINTMENT RECEIPT
+            </span>
 
-            <h2 id="appointment-success-title">
-                Appointment Successfully Booked
+            <h2>
+                Appointment Confirmed
             </h2>
 
-            <p class="success-message">
-                Your appointment has been scheduled successfully.
+            <p>
+                Your appointment has been successfully recorded. Please keep your Appointment ID for reference.
+            </p>
+
+            <div class="receipt-id">
+                <span>APPOINTMENT ID</span>
+                <strong id="appointment-receipt-id">APT-2026-0001</strong>
+            </div>
+
+            <div class="receipt-details appointment-receipt-details">
+                <div>
+                    <span>Service</span>
+                    <strong id="appointment-receipt-service">—</strong>
+                </div>
+                <div>
+                    <span>Date</span>
+                    <strong id="appointment-receipt-date">—</strong>
+                </div>
+                <div>
+                    <span>Time</span>
+                    <strong id="appointment-receipt-time">—</strong>
+                </div>
+                <div>
+                    <span>Name</span>
+                    <strong id="appointment-receipt-name">—</strong>
+                </div>
+                <div>
+                    <span>Status</span>
+                    <strong>Confirmed</strong>
+                </div>
+            </div>
+
+            <div class="receipt-note">
+                Please arrive a few minutes before your scheduled appointment and bring any required documents.
+            </div>
+
+            <button class="btn btn-green full-width" type="button" data-close-modal>
+                Done
+            </button>
+        </div>
+    </div>
+
+
+    <!-- ANNOUNCEMENT DETAILS MODAL -->
+    <div class="modal" id="announcement-modal">
+
+        <div class="modal-box">
+
+            <button class="modal-close" type="button" data-close-modal>
+                ×
+            </button>
+
+            <span class="modal-label">
+                BARANGAY ANNOUNCEMENT
+            </span>
+
+            <div class="modal-icon">
+                📢
+            </div>
+
+            <h2 id="announcement-modal-title">
+                Announcement
+            </h2>
+
+            <time id="announcement-modal-date">
+                August 28, 2026
+            </time>
+
+            <p id="announcement-modal-text">
+                Announcement details.
+            </p>
+
+            <button class="btn btn-green full-width" type="button" data-close-modal>
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ALL ANNOUNCEMENT MODAL -->
+    <div class="modal" id="all-announcements-modal">
+
+        <div class="modal-box announcements-modal-box">
+
+            <button class="modal-close" type="button" data-close-modal>
+                ×
+            </button>
+
+            <span class="modal-label">
+                BARANGAY PARANG
+            </span>
+
+            <h2>
+                All Announcements
+            </h2>
+
+            <p class="modal-subtitle">
+                Browse announcements, programs, notices, and community updates.
             </p>
 
 
-            <!-- Appointment ID -->
-            <div class="appointment-id-box">
+            <div class="announcement-list" id="all-announcement-list"></div>
 
-                <span>
-                    Appointment ID
-                </span>
+        </div>
 
-                <strong id="appointment-id">
-                    APT-2026-0001
+    </div>
+
+
+    <!-- TRACK REQUEST MODAL -->
+    <div class="modal" id="track-modal">
+
+        <div class="modal-box">
+
+            <button class="modal-close" type="button" data-close-modal>
+                ×
+            </button>
+
+            <span class="modal-label">
+                REQUEST TRACKING
+            </span>
+
+            <h2>
+                Track Your Request
+            </h2>
+
+            <p class="modal-subtitle">
+                Enter the Request ID provided after submitting your service request.
+            </p>
+
+
+            <form id="track-form">
+
+                <div class="form-field">
+
+                    <label for="track-id">
+                        Request ID
+                    </label>
+
+                    <input id="track-id" type="text" placeholder="Example: REQ-2026-1234" required>
+
+                </div>
+
+                <button class="btn btn-green full-width" type="submit">
+                    Check Status →
+                </button>
+
+            </form>
+
+
+            <div class="tracking-result" id="tracking-result">
+
+                <div class="tracking-header">
+
+                    <span class="tracking-check">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <span>
+                            REQUEST FOUND
+                        </span>
+
+                        <strong id="tracking-id-display">
+                            REQ-2026-0001
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tracking-timeline">
+
+                    <div class="timeline-item completed">
+
+                        <span></span>
+
+                        <div>
+                            <strong>
+                                Request Submitted
+                            </strong>
+
+                            <small>
+                                Your request was received.
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item current">
+
+                        <span></span>
+
+                        <div>
+                            <strong>
+                                Pending Verification
+                            </strong>
+
+                            <small>
+                                Barangay staff will verify the request.
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <span></span>
+
+                        <div>
+                            <strong>
+                                Processing
+                            </strong>
+
+                            <small>
+                                Service processing will begin after verification.
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <span></span>
+
+                        <div>
+                            <strong>
+                                Ready for Release
+                            </strong>
+
+                            <small>
+                                You will be notified when your document is ready.
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- LOGIN / GET STARTED PLACEHOLDER -->
+    <div class="modal" id="login-modal">
+
+        <div class="modal-box login-box">
+
+            <button class="modal-close" type="button" data-close-modal>
+                ×
+            </button>
+
+            <div class="login-icon">
+                🔐
+            </div>
+
+            <span class="modal-label">
+                RESIDENT ACCESS
+            </span>
+
+            <h2>
+                Get Started
+            </h2>
+
+            <p>
+                Resident login and account registration will be connected
+                in the next development stage.
+            </p>
+
+            <div class="coming-soon">
+                <strong>
+                    Coming Next
                 </strong>
 
+                <span>
+                    Login • Registration • Resident Dashboard
+                </span>
             </div>
 
-
-            <!-- Appointment summ -->
-            <div class="appointment-summary">
-
-
-                <div>
-
-                    <span>
-                        Service
-                    </span>
-
-                    <strong id="confirmed-service">
-                        —
-                    </strong>
-
-                </div>
-
-
-                <div>
-
-                    <span>
-                        Date
-                    </span>
-
-                    <strong id="confirmed-date">
-                        —
-                    </strong>
-
-                </div>
-
-
-                <div>
-
-                    <span>
-                        Time
-                    </span>
-
-                    <strong id="confirmed-time">
-                        —
-                    </strong>
-
-                </div>
-
-
-            </div>
-
-
-            <!-- Close -->
-            <button type="button" class="appointment-success-close-button" id="appointment-success-close">
-                Back to Home
+            <button class="btn btn-green full-width" type="button" data-close-modal>
+                Continue as Guest
             </button>
 
         </div>
